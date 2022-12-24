@@ -35,7 +35,7 @@ export default defineComponent({
 
 .el-container {
     align-items: flex-start;
-    height: 100%;
+    height: 83%;
 }
 
 .common-layout {
