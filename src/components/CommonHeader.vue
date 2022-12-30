@@ -47,6 +47,7 @@ export default {
         })
         const handleLoginOut = () => {
             store.commit('cleanMenu')
+            store.commit('clearToken')
             router.push({
                 name: 'login'
             })
