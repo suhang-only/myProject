@@ -18,6 +18,7 @@ export default {
         const route = useRoute()
         const tags = store.state.tabsList
         const changeMenu = (item) => {
+            store.commit('selectMenu', item)
             router.push({ name: item.name })
         }
         const handleClose = (tag, index) => {
@@ -30,11 +31,13 @@ export default {
             if (index === length) {
                 router.push({
                     name: tags[index - 1].name
-                })
+                }),
+                store.commit('selectMenu', tags[index - 1])
             } else {
                 router.push({
                     name: tags[index].name
-                })
+                }),
+                store.commit('selectMenu', tags[index])
             }
         }
         return {
